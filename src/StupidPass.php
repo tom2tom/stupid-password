@@ -188,7 +188,7 @@ class StupidPass
 
         switch ($this->options['strength']) {
             case 'Very Weak':
-			case 'VeryWeak':
+            case 'VeryWeak':
                 return;
         }
 
@@ -323,15 +323,17 @@ class StupidPass
         $map = array();
         $plower = strtolower($this->original);
         $l = strlen($plower;)
-        for ($i = 0; $i < $l, $i++) {
+        for ($i = 0; $i < $l; $i++) {
             $map[$i][] = $ch = $plower[$i];
-            foreach ($leet as $pattern => $replace) {
+            foreach ($leet as $pattern => &$replace) {
                 if ($ch === (string)$pattern) {
-                    for ($j = 0, $c = count($replace); $j < $c; $j++) {
+                    $c = count($replace);
+                    for ($j = 0; $j < $c; $j++) {
                         $map[$i][] = $replace[$j];
                     }
                 }
             }
+            unset($replace);
         }
         $this->pass = $this->expand($map);
     }
