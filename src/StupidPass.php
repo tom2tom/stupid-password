@@ -3,7 +3,7 @@
  * StupidPass - simple password-quality checker
  *
  * This class provides a simple way of preventing user from using a
- * easy-to-guess/bruteforce password. It has been developed to get rid
+ * easy-to-guess/brute-force password. It has been developed to get rid
  * of the *crack-lib PHP extension*.
  *
  * It provides simple, yet pretty effective password validation rules. The
