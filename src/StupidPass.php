@@ -322,7 +322,7 @@ class StupidPass
         );
         $map = array();
         $plower = strtolower($this->original);
-        $l = strlen($plower;)
+        $l = strlen($plower);
         for ($i = 0; $i < $l; $i++) {
             $map[$i][] = $ch = $plower[$i];
             foreach ($leet as $pattern => &$replace) {
